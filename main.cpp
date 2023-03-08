@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+using namespace std;
 string getOsName(){
         #ifdef _WIN32
         return "Windows 32-bit";

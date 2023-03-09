@@ -26,3 +26,13 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}} -V
+      
+    - name: Setup Java JDK
+      uses: action/setup-java@v3.10.0
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+      
+    - name: java install,build and test
+      run: java TypeCheck.java
+        
